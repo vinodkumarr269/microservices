@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Mon Oct 14 19:33:56 IST 2019
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\Coalesce\\.m2\\repository\\org\\springframework\\spring-web\\5.1.9.RELEASE\\spring-web-5.1.9.RELEASE.jar=C\:\\Software\\STS 3.9_64\\sts-bundle\\pivotal-tc-server\\instances\\base-instance\\wtpwebapps\\DiscoverMicroService\\WEB-INF\\lib\\spring-web-5.1.9.RELEASE.jar
+org.eclipse.jst.jee.server\:DiscoverMicroService=C\:\\Software\\STS 3.9_64\\sts-bundle\\pivotal-tc-server\\instances\\base-instance\\wtpwebapps\\DiscoverMicroService

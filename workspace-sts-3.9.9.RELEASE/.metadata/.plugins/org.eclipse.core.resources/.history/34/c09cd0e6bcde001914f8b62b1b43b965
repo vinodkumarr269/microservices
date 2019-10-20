@@ -1,0 +1,13 @@
+package com.hcl.service;
+
+import java.util.List;
+
+import com.hcl.model.Employee;
+
+public interface EmployeeService {
+	public List<Employee> getAllEmployee();
+	public String addEmployee(Employee employee);
+	public String addEmployees(List<Employee>, employee);
+	
+
+}

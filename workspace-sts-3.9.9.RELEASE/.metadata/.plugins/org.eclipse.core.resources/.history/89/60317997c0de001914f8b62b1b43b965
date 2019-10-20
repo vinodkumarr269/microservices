@@ -1,0 +1,56 @@
+package com.hcl.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.security.auth.message.callback.PrivateKeyCallback.Request;
+import javax.xml.ws.Response;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.hcl.model.Employee;
+import com.hcl.repository.EmployeeRepositary;
+@Service
+public class EmployeeServiceImpl implements EmployeeService {
+    @Autowired
+   EmployeeRepositary e;
+	@Override
+	public List<Employee> getAllEmployee() {
+		List<Employee> empList=(List<Employee>)e.findAll();
+		if(empList.size()>0) {
+			return empList;
+		}
+		else
+		{
+			return new ArrayList<Employee>();
+		}
+		
+	}
+	@Override
+
+	public String addEmployee(Employee emp) {
+		
+        Employee tempEmp=e.save(emp);
+        if(tempEmp != null) {
+        	return "created successfully";
+        }
+        else {
+        	return "not created";
+        }
+	
+		
+	}
+	@Override
+	public String addEmployees(List<Employee> employee) {
+		List<Employee> tempEmp=(List<Employee>) e.saveAll(employee);
+		return "Created Successfully";
+	}
+	@Override
+	public String deleteEmployee(int id) {
+		e.deleteById(id);
+		return "deleted";
+	}
+
+}

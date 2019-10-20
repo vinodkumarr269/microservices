@@ -1,0 +1,10 @@
+INDEX VERSION 1.4+C:\Users\Coalesce\Documents\SpringData\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3861873645.index
+2186743871.index
+2935229697.index
+3231765861.index
+197345545.index
+999329603.index
+2664289945.index
+3049218001.index
+4191393844.index

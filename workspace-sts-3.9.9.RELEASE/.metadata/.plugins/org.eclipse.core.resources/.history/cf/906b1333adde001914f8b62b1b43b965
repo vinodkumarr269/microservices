@@ -1,0 +1,37 @@
+package com.hcl.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.hcl.model.Employee;
+import com.hcl.repository.EmployeeRepositary;
+@Service
+public class EmployeeServiceImpl implements EmployeeService {
+    @Autowired
+   EmployeeRepositary e;
+	@Override
+	public List<Employee> getAllEmployee() {
+		List<Employee> empList=(List<Employee>)e.findAll();
+		if(empList.size()>0) {
+			return empList;
+		}
+		else
+		{
+			return new ArrayList<Employee>();
+		}
+		
+	}
+	@Override
+	public int addEmployee(Employee employee) {
+		
+		 String sql = "INSERT INTO employee(id, name, salary) VALUES(?,?,?)";
+		    return e.save(sql, employee.getId(),
+		        employee.getName(), employee.getSalary();
+		
+		
+	}
+
+}

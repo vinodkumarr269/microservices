@@ -1,0 +1,64 @@
+<%@page import="org.apache.jasper.tagplugins.jstl.core.ForEach"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Employee Management Screen</title>
+<style>
+table:hover {
+	background: pink;
+}
+</style>
+</head>
+<body bgcolor="yellow">
+	<div align="center">
+	<
+		<h1>Student List</h1>
+		<c:forEach var="i" begin="0" end="${(total)%(pagesize)}">
+					<a href="/displayAll/Page/${i}">page </a>
+			</c:forEach>
+		
+		
+	
+	
+	
+		<table border="1" bgcolor="green">
+			<th>empno</th>
+			<th>empname</th>
+			<th>dept</th>
+			<th>desig</th>
+			<th>basic</th>
+		<P></P>
+
+			<c:forEach var="student" items="${employeeList}">
+				<tr >
+					<td>${student.empno}</td>
+					<td>${student.name}</td>
+					<td>${student.dept}</td>
+					<td>${student.desig}</td>
+					<td>${student.basic}</td>
+
+				</tr>
+			</c:forEach>
+		</table>
+				<h4>Home<a href="/">Home</a></h4>
+		
+		<!--  <h4>display conntractors <a href="/displaycontractor">click</a></h4>
+		<h4>Home<a href="/">Home</a></h4>
+		<h4>Manager salary <a href="/managersalary">click</a></h4>
+		<h4>display manager name <a href="managername">click</a></h4>
+		<h4>name <a href="name">click</a></h4>
+	    <h4>soting desig ass <a href="displayallsortbydesign">click</a></h4>
+	    <h4>soting desig des <a href="displayallsortbydesigndesending">click</a></h4>
+	    <h4>soting by desig and dept<a href="displayallsortbydesignandsalary">click</a></h4>
+		<h4>soting desec and ass<a href="displayallsortbydesignandsalary1">click</a></h4>
+		<h4>soting desig sal<a href="displayall4">click</a></h4>
+		<h4>soting 5<a href="displayall5">click</a></h4>
+		-->
+	</div>
+</body>
+</html>

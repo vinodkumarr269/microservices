@@ -1,0 +1,13 @@
+package com.hcl.controller;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping(value="/employee")
+public class EmployController {
+	public ResponseEntity<Employee>
+	
+
+}

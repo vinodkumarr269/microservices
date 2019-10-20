@@ -1,0 +1,18 @@
+package com.hcl.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.hcl.model.Employee;
+
+public class EmployeeServiceImpl implements EmployeeService {
+    @Autowired
+    public EmployeeService s;
+	@Override
+	public List<Employee> getAllEmployee() {
+		
+		 List<Employee>  lst=s.F
+	}
+
+}

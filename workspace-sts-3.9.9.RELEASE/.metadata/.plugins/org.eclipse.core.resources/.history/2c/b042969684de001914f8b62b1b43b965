@@ -1,0 +1,16 @@
+package hcl.com.hcl.springbootdemo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class Application {
+	@Value("${spring.application.vinod}")
+	private String propertyName;
+
+	public static void main(String[] args) {
+		SpringApplication.run(Application.class, args);
+		
+	}
+
+}
